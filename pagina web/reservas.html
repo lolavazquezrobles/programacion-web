@@ -8,6 +8,8 @@
 </head>
 <body>
 
+
+  
   <header>
     <h1>Blanca House</h1>
     <nav>
@@ -15,6 +17,7 @@
         <li><a href="index.html">Inicio</a></li>
         <li><a href="menu.html">Menú</a></li>
         <li><a href="reservas.html">Reservas</a></li>
+        <li><a href="reseñas.html">Reseñas</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
@@ -30,6 +33,7 @@
         <input type="number" id="personas" placeholder="Cantidad de personas" required>
         <input type="date" id="fecha" required>
         <input type="time" id="hora" required>
+        <input type="email" id="mail" placeholder="Mail" required>
         <button id="agregar">Reservar</button>
       </div>
 
@@ -53,6 +57,16 @@
 
 
       <div id="listaReservas"></div>
+
+      <!-- CONSULTAR RESERVAS -->
+      <div class="formulario">
+        <h3>Consultar reservas por correo</h3>
+        <input type="email" id="mailConsulta" placeholder="Tu mail" required>
+        <button id="consultar">Consultar</button>
+      </div>
+
+      <div id="resultadoConsulta"></div>
+
     </section>
   </main>
 
@@ -60,6 +74,11 @@
     <p>© 2025 Blanca House | Salguero 3453, CABA | Tel: (011) 5585-7855</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    emailjs.init("GDkl2_g2nbwuSsWH-");
+  </script>
+  <script src="blanca_house.js"></script>
+
 </body>
 </html>
